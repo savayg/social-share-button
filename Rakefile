@@ -14,7 +14,7 @@ namespace :assets do
       dir_name = path.split("/").last
       SpriteFactory.run!("app/assets/images/sprites/#{dir_name}",
                           :layout => :packed,
-                          :output_style => "app/assets/stylesheets/#{dir_name}.scss",
+                          :output_style => "app/assets/stylesheets/#{dir_name}.scss.erb",
                           :nocomments => true,
                           :selector => ".#{dir_name}-") do |images|
         result = []
